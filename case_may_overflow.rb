@@ -13,7 +13,8 @@ e = engine.new_emitter(ExponentialDistro.new(100))
 r = engine.new_receiver
 q = engine.new_queue
 #s = engine.new_server(ExponentialDistro.new(100))
-s = engine.new_server(NormalDistro.new(100, 50))
+#s = engine.new_server(NormalDistro.new(100, 50))
+s = engine.new_server(NormalDistro.new(80, 50))
 
 e.connect_to(q)
 q.connect_to(s)
